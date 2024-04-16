@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Lalezar&family=Markazi+Text:wght@400..700&family=Vazirmatn:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Lalezar&&family=Vazirmatn:wght@100..900&display=swap");
+
+// Baloo Bhaijaan 2
+// Lalezar
+// Vazirmatn
 
 $green: #219150;
 $black: #10221b;
@@ -121,6 +125,72 @@ html {
   }
 }
 
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.2s linear;
+  transform: translateY(-110%);
+  &.active {
+    transform: translateY(0);
+  }
+
+  #search-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: $white;
+    font-size: 2rem;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  form {
+    width: 50rem;
+    margin: 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid $white;
+    display: flex;
+    align-items: center;
+    direction: rtl;
+
+    input {
+      width: 100%;
+      font-size: 1.5rem;
+      color: $white;
+      text-transform: none;
+      background: none;
+      text-align: right;
+      padding-left: 1.5rem;
+      padding-right: 0.5rem;
+
+      &::placeholder {
+        color: #929292;
+      }
+    }
+
+    label {
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: $white;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
 // * Media queries ====================
 
 @media screen and (max-width: 1200px) {
@@ -140,7 +210,7 @@ html {
     .navbar {
       position: fixed;
       top: 0;
-      left: -110%;
+      left: -100%;
       background: $white;
       z-index: 10000;
       width: 25rem;
@@ -152,7 +222,12 @@ html {
 
       &.active {
         left: 0;
-        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.3);
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
       }
 
       #nav-close {
@@ -179,6 +254,15 @@ html {
       div,
       a {
         font-size: 1.5rem;
+      }
+    }
+  }
+  .search-form {
+    form {
+      width: 70%;
+
+      label {
+        font-size: 2rem;
       }
     }
   }
