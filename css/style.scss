@@ -4,11 +4,12 @@
 // Lalezar
 // Vazirmatn
 
-$green: #219150;
+// $green: #219150;
+$green: #13a40b;
 $black: #10221b;
 $white: #fff;
 $light-bg: #eee;
-$border: 2rem solid $black;
+$border: 0.2rem solid $black;
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
 @mixin grid($value) {
@@ -34,16 +35,44 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   &::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.6rem;
   }
   &::-webkit-scrollbar-track {
-    background: $white;
+    background: $black;
   }
   &::-webkit-scrollbar-thumb {
-    background: $black;
+    background: $green;
   }
 }
 
+section {
+  padding: 5rem 4%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 1px solid #ffffff88;
+  color: $white;
+  cursor: pointer;
+  background: $black;
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+
+  &:hover {
+    background: $white;
+    color: $black;
+    border: 1px solid $black;
+  }
+}
+
+// Header ====================
 .header {
   position: fixed;
   top: 0;
@@ -125,6 +154,8 @@ html {
   }
 }
 
+// Search-form ====================
+
 .search-form {
   position: fixed;
   top: 0;
@@ -191,8 +222,90 @@ html {
   }
 }
 
-// * Media queries ====================
+// Home ====================
+.home {
+  padding: 0;
+  .box {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 5rem 8%;
+    text-align: right;
 
+    .content {
+      width: 35rem;
+
+      span {
+        font-size: 2rem;
+        font-weight: 800;
+        color: $black;
+        text-shadow: 1px 1px 2px $green;
+      }
+
+      h3 {
+        font-size: 5rem;
+        color: $green;
+        font-family: "Lalezar";
+        text-shadow: 2px 2px 2px $black;
+      }
+
+      p {
+        line-height: 1.5;
+        color: $white;
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        font-weight: 600;
+        text-align: justify;
+        direction: rtl;
+      }
+    }
+  }
+
+  .second {
+    justify-content: flex-end;
+    .content {
+      width: 50rem;
+      text-align: center;
+      h3 {
+        font-size: 5rem;
+        font-weight: 800;
+        color: $black;
+        text-shadow: 1px 1px 2px $green;
+      }
+      span {
+        font-size: 3rem;
+        color: $green;
+        font-family: "Lalezar";
+        text-shadow: 3px 3px 3px $black;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .third {
+    .content {
+      width: 50rem;
+      text-align: left;
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: $white;
+    font-size: 2rem;
+  }
+}
+
+//  Media queries ====================
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;
@@ -257,6 +370,7 @@ html {
       }
     }
   }
+
   .search-form {
     form {
       width: 70%;
@@ -266,10 +380,46 @@ html {
       }
     }
   }
+
+  .home {
+    .box {
+      background-position: 80% !important;
+      padding: 5rem 10%;
+
+      &.second {
+        background-position: left !important;
+
+        .content {
+          h3 {
+            font-size: 4rem;
+          }
+          span {
+            font-size: 2rem;
+            text-shadow: 2px 2px 2px $black;
+          }
+          p {
+            text-align: center;
+          }
+        }
+      }
+      &.third {
+        .content {
+          text-align: center;
+          h3 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
   html {
     font-size: 70%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
 }

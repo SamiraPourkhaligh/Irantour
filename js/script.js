@@ -21,3 +21,13 @@ document.querySelector("#search-close").onclick = () => {
 window.onscroll = () => {
   navbar.classList.remove("active");
 };
+
+// swiper slide
+var swiper = new Swiper(".home-slider", {
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

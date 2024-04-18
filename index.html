@@ -7,8 +7,8 @@
       name="description"
       content="تورهای طبیعت گردی و گردشگری | مجری تخصصی تورهای داخلی و ایرانگردی"
     />
-    <link rel="icon" href="آیکون مرورگر" />
-    <title>Tour Website</title>
+    <link rel="icon" href="./assets/images/icon.png" />
+    <title>Irantour</title>
 
     <!-- font awesome cdn link -->
     <link
@@ -16,12 +16,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <!-- swiper cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- custom css file link -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <!-- header section starts -->
+    <!---------------------- header section ---->
     <header class="header">
       <a href="#home" class="logo">
         <img src="assets/images/logo.png" alt="Travel-logo" />
@@ -48,7 +54,7 @@
       </div>
     </header>
 
-    <!-- search form -->
+    <!----------------------  search form ---->
     <div class="search-form">
       <div id="search-close" class="fas fa-times"></div>
 
@@ -63,6 +69,90 @@
       </form>
     </div>
 
+    <!----------------------  home section ---->
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <!-- slide One -->
+          <div class="swiper-slide">
+            <div
+              class="box"
+              style="
+                background: url(./assets/images/home-slide/image1.jpeg)
+                  no-repeat;
+              "
+            >
+              <div class="content">
+                <span>هرگز متوقف نشوید </span>
+                <h3>کاوش در طبیعت</h3>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد.
+                </p>
+                <a href="#" class="btn">شروع ماجراجویی</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- slide two -->
+          <div class="swiper-slide second">
+            <div
+              class="box second"
+              style="
+                background: url(./assets/images/home-slide/image2.jpg) no-repeat;
+              "
+            >
+              <div class="content">
+                <h3>خاطرات بی‌نظیر بسازید</h3>
+                <span>تجربه‌ ماجراجویی‌های بی‌پایان</span>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای
+                </p>
+                <a href="#" class="btn">شروع ماجراجویی</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- slide three -->
+          <div class="swiper-slide">
+            <div
+              class="box third"
+              style="
+                background: url(./assets/images/home-slide/image3.jpg) no-repeat;
+              "
+            >
+              <div class="content">
+                <h3>زندگی را احساس کنید</h3>
+                <span
+                  >از فرهنگ‌ها و مناظر زیبای هر گوشه از کشورتان لذت ببرید</span
+                >
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد.
+                </p>
+
+                <a href="#" class="btn">شروع ماجراجویی</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- swiper js cdn link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- custom js file link -->
     <script src="js/script.js"></script>
   </body>
