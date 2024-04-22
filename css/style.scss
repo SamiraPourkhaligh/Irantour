@@ -54,7 +54,9 @@ section {
   margin: 2rem auto;
   font-size: 2.5rem;
   color: $green;
-  font-family: "Lalezar";
+  font-family: "Baloo Bhaijaan 2";
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem 0.5rem rgba(16, 34, 27, 0.29);
 }
 
 .btn-1 {
@@ -362,7 +364,7 @@ section {
   }
 }
 
-//  ==================== Category
+//  ==================== about
 .about {
   display: flex;
   align-items: center;
@@ -385,11 +387,9 @@ section {
   .content {
     flex: 1 1 30rem;
 
-    h3 {
+    .heading {
       text-align: center;
-      font-size: 3vw;
-      color: $green;
-      font-family: "Lalezar";
+      margin: 0;
     }
 
     p {
@@ -402,6 +402,8 @@ section {
     }
   }
 }
+
+//  ==================== Shop
 
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
