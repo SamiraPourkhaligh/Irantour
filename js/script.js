@@ -20,6 +20,21 @@ document.querySelector("#search-close").onclick = () => {
 
 window.onscroll = () => {
   navbar.classList.remove("active");
+
+  // Change navbar background
+  if (window.scrollY > 10) {
+    document.querySelector(".header").classList.add("active");
+  } else {
+    document.querySelector(".header").classList.remove("active");
+  }
+};
+
+window.onload = () => {
+  if (window.scrollY > 10) {
+    document.querySelector(".header").classList.add("active");
+  } else {
+    document.querySelector(".header").classList.remove("active");
+  }
 };
 
 // swiper slide
