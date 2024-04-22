@@ -30,7 +30,15 @@ section {
   padding: 5rem 4%;
 }
 
-.btn {
+.heading {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 2.5rem;
+  color: #13a40b;
+  font-family: "Lalezar";
+}
+
+.btn-1 {
   margin-top: 1rem;
   display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.5333333333);
@@ -41,14 +49,27 @@ section {
   padding: 0.5rem 2rem;
   font-weight: 700;
   border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
 }
-.btn:hover {
+.btn-1:hover {
   background: #fff;
   color: #10221b;
+  border: 1px solid #10221b;
+}
+
+.btn-2 {
+  display: inline-block;
+  color: #10221b;
+  border: 0.1rem solid #10221b;
+  cursor: pointer;
+  background: #fff;
+  font-size: 1rem;
+  padding: 0.4rem 2rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.btn-2:hover {
+  background: #10221b;
+  color: #fff;
   border: 1px solid #10221b;
 }
 
@@ -64,6 +85,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.header.active {
+  background: #fff;
+  box-shadow: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
 }
 .header .logo {
   margin-right: auto;
@@ -255,14 +280,52 @@ section {
   font-size: 2rem;
 }
 
+.category .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+  gap: 1.5rem;
+}
+.category .box-container .box {
+  text-align: center;
+  padding: 2rem 0;
+}
+.category .box-container .box img {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.category .box-container .box h3 {
+  font-size: 1.5rem;
+  color: #13a40b;
+}
+.category .box-container .box p {
+  font-size: 1rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 1.3;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;
+  }
+  .category .box-container .box {
+    scale: 0.9;
   }
 }
 @media screen and (max-width: 992px) {
   html {
     font-size: 85%;
+  }
+  .category .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
+  .category .box-container .box {
+    scale: 1;
+    padding: 2rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -336,6 +399,21 @@ section {
   }
   .home .box.third .content h3 {
     font-size: 4rem;
+  }
+  .category .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .category .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
+  .category .box-container .box {
+    padding: 1rem 5rem;
   }
 }
 @media screen and (max-width: 480px) {

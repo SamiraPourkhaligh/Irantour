@@ -9,12 +9,12 @@ $green: #13a40b;
 $black: #10221b;
 $white: #fff;
 $light-bg: #eee;
-$border: 0.2rem solid $black;
-$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+$border: 0.1rem solid $black;
+$box-shadow: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
 
 @mixin grid($value) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax($value, 1fr));
   gap: 1.5rem;
 }
 
@@ -49,7 +49,15 @@ section {
   padding: 5rem 4%;
 }
 
-.btn {
+.heading {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 2.5rem;
+  color: $green;
+  font-family: "Lalezar";
+}
+
+.btn-1 {
   margin-top: 1rem;
   display: inline-block;
   border: 1px solid #ffffff88;
@@ -60,10 +68,6 @@ section {
   padding: 0.5rem 2rem;
   font-weight: 700;
   border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
 
   &:hover {
     background: $white;
@@ -72,7 +76,24 @@ section {
   }
 }
 
-// Header ====================
+.btn-2 {
+  display: inline-block;
+  color: $black;
+  border: $border;
+  cursor: pointer;
+  background: $white;
+  font-size: 1rem;
+  padding: 0.4rem 2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  &:hover {
+    background: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+}
+
+//  ==================== Header
 .header {
   position: fixed;
   top: 0;
@@ -85,6 +106,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.active {
+    background: $white;
+    box-shadow: $box-shadow;
+  }
 
   .logo {
     margin-right: auto;
@@ -154,7 +180,7 @@ section {
   }
 }
 
-// Search-form ====================
+//  ==================== Search-form
 
 .search-form {
   position: fixed;
@@ -222,7 +248,7 @@ section {
   }
 }
 
-// Home ====================
+//  ==================== Home
 .home {
   padding: 0;
   .box {
@@ -305,16 +331,63 @@ section {
   }
 }
 
-//  Media queries ====================
+//  ==================== Category
+.category {
+  .box-container {
+    @include grid(23%);
+
+    .box {
+      text-align: center;
+      padding: 2rem 0;
+
+      img {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: $green;
+      }
+
+      p {
+        font-size: 1rem;
+        color: $black;
+        padding: 1rem 0;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+//  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;
+  }
+  .category {
+    .box-container {
+      .box {
+        scale: 0.9;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 992px) {
   html {
     font-size: 85%;
+  }
+  .category {
+    .box-container {
+      @include grid(25rem);
+      .box {
+        scale: 1;
+        padding: 2rem;
+      }
+    }
   }
 }
 
@@ -409,6 +482,22 @@ section {
             font-size: 4rem;
           }
         }
+      }
+    }
+  }
+  .category {
+    .box-container {
+      @include grid(18rem);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .category {
+    .box-container {
+      @include grid(25rem);
+      .box {
+        padding: 1rem 5rem;
       }
     }
   }
