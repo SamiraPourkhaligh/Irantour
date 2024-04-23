@@ -331,6 +331,7 @@ section {
 .about .content .heading {
   text-align: center;
   margin: 0;
+  font-size: 2.3rem;
 }
 .about .content p {
   font-size: 1.2rem;
