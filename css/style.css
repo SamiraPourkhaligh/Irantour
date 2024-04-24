@@ -50,7 +50,7 @@ section {
   font-size: 1.4rem;
   padding: 0.5rem 2rem;
   font-weight: 700;
-  border-radius: 7px;
+  border-radius: 0.5rem;
 }
 .btn-1:hover {
   background: #fff;
@@ -67,7 +67,7 @@ section {
   font-size: 1rem;
   padding: 0.4rem 2rem;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 0.3rem;
 }
 .btn-2:hover {
   background: #10221b;
@@ -342,6 +342,80 @@ section {
   direction: rtl;
 }
 
+.shop .slide {
+  width: 25rem;
+  border: 0.1rem solid #10221b;
+  border-radius: 0.5rem;
+}
+.shop .slide:hover {
+  box-shadow: 0rem 0.2rem 0.5rem rgba(16, 34, 27, 0.3058823529);
+}
+.shop .slide:hover .image .icons {
+  top: 0.5rem;
+}
+.shop .slide .image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.shop .slide .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+.shop .slide .image .icons {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  width: 100%;
+  position: absolute;
+  top: -10rem;
+  left: 0.5rem;
+  text-align: left;
+  z-index: 10;
+}
+.shop .slide .image .icons a {
+  height: 2.3rem;
+  width: 2.3rem;
+  line-height: 2.3rem;
+  font-size: 1rem;
+  text-align: center;
+  background: #10221b;
+  color: #fff;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  border-radius: 0.2rem;
+}
+.shop .slide .image .icons a:hover {
+  background: #13a40b;
+  color: #10221b;
+}
+.shop .slide .content {
+  padding: 0.5rem 0 1rem 0;
+  text-align: center;
+}
+.shop .slide .content h3 {
+  font-size: 1.5rem;
+  color: #10221b;
+}
+.shop .slide .content .price {
+  font-size: 1.5rem;
+  color: #13a40b;
+}
+.shop .swiper-button-next::after,
+.shop .swiper-button-prev::after {
+  color: #10221b;
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;
@@ -467,8 +541,16 @@ section {
   html {
     font-size: 70%;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
+  .home .swiper-button-next,
+  .home .swiper-button-prev {
     display: none;
+  }
+  .shop .product-slider {
+    padding: 2rem 4rem;
+  }
+  .shop .swiper-button-next::after,
+  .shop .swiper-button-prev::after {
+    color: #10221b;
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
