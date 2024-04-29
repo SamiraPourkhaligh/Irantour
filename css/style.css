@@ -43,7 +43,7 @@ section {
 .btn-1 {
   margin-top: 1rem;
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.5333333333);
+  border: 0.1rem solid rgba(255, 255, 255, 0.5333333333);
   color: #fff;
   cursor: pointer;
   background: #10221b;
@@ -416,6 +416,62 @@ section {
   font-size: 2rem;
 }
 
+.packages {
+  background: #eee;
+}
+.packages .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  gap: 1.5rem;
+}
+.packages .box-container .box {
+  text-align: center;
+  background: #fff;
+  border: 0.1rem solid #10221b;
+  transition: all 0.2s;
+}
+.packages .box-container .box:hover {
+  background: #10221b;
+}
+.packages .box-container .box:hover .content p,
+.packages .box-container .box:hover .content h3 {
+  color: #fff;
+}
+.packages .box-container .box:hover .btn-2:hover {
+  background: #13a40b;
+}
+.packages .box-container .box .image {
+  height: 18rem;
+  overflow: hidden;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.packages .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.packages .box-container .box .content {
+  padding: 1rem;
+}
+.packages .box-container .box .content h3 {
+  font-size: 1.5rem;
+  color: #10221b;
+  font-family: "Baloo Bhaijaan 2";
+}
+.packages .box-container .box .content p {
+  font-size: 1rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 1.2;
+}
+.packages .box-container .box .content .price {
+  font-size: 1.5rem;
+  color: #13a40b;
+  padding-bottom: 1rem;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;
@@ -545,12 +601,11 @@ section {
   .home .swiper-button-prev {
     display: none;
   }
-  .shop .product-slider {
-    padding: 2rem 4rem;
+  .shop .slide {
+    max-width: 25rem;
   }
   .shop .swiper-button-next::after,
   .shop .swiper-button-prev::after {
-    color: #10221b;
-    font-size: 2rem;
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

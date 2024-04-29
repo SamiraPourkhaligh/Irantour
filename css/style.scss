@@ -63,7 +63,7 @@ section {
 .btn-1 {
   margin-top: 1rem;
   display: inline-block;
-  border: 1px solid #ffffff88;
+  border: 0.1rem solid #ffffff88;
   color: $white;
   cursor: pointer;
   background: $black;
@@ -74,7 +74,7 @@ section {
   &:hover {
     background: $white;
     color: $black;
-    border: 0.1rem solid $black;
+    border: $border;
   }
 }
 
@@ -492,6 +492,71 @@ section {
   }
 }
 
+//  ==================== Packages
+.packages {
+  background: $light-bg;
+
+  .box-container {
+    @include grid(23rem);
+
+    .box {
+      text-align: center;
+      background: $white;
+      border: $border;
+      transition: all 0.2s;
+      &:hover {
+        background: $black;
+
+        .content p,
+        .content h3 {
+          color: $white;
+        }
+        .btn-2 {
+          &:hover {
+            background: $green;
+          }
+        }
+      }
+
+      .image {
+        height: 18rem;
+        overflow: hidden;
+        padding: 1rem;
+        padding-bottom: 0;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        padding: 1rem;
+
+        h3 {
+          font-size: 1.5rem;
+          color: $black;
+          font-family: "Baloo Bhaijaan 2";
+        }
+
+        p {
+          font-size: 1rem;
+          color: $black;
+          padding: 1rem 0;
+          line-height: 1.2;
+        }
+
+        .price {
+          font-size: 1.5rem;
+          color: $green;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
@@ -664,14 +729,12 @@ section {
   }
 
   .shop {
-    .product-slider {
-      padding: 2rem 4rem;
+    .slide {
+      max-width: 25rem;
     }
-
     .swiper-button-next::after,
     .swiper-button-prev::after {
-      color: $black;
-      font-size: 2rem;
+      display: none;
     }
   }
 }
