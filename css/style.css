@@ -437,8 +437,14 @@ section {
 .packages .box-container .box:hover .content h3 {
   color: #fff;
 }
+.packages .box-container .box:hover .btn-2 {
+  background: #10221b;
+  border: 0.1rem solid #fff;
+  color: #fff;
+}
 .packages .box-container .box:hover .btn-2:hover {
-  background: #13a40b;
+  background: #fff;
+  color: #10221b;
 }
 .packages .box-container .box .image {
   height: 18rem;
@@ -470,6 +476,54 @@ section {
   font-size: 1.5rem;
   color: #13a40b;
   padding-bottom: 1rem;
+}
+
+.services {
+  background: #eee;
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  gap: 1.5rem;
+}
+.services .box-container .box {
+  text-align: center;
+  padding: 1rem;
+  border: 0.1rem solid #10221b;
+  border-radius: 0.5rem;
+  background: #fff;
+  transition: all 0.2s;
+}
+.services .box-container .box:hover {
+  background: #10221b;
+}
+.services .box-container .box:hover img {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+.services .box-container .box:hover p {
+  color: #fff;
+}
+.services .box-container .box:hover .btn-2 {
+  background: #10221b;
+  border: 0.1rem solid #fff;
+  color: #fff;
+}
+.services .box-container .box:hover .btn-2:hover {
+  background: #fff;
+  color: #10221b;
+}
+.services .box-container .box img {
+  height: 6rem;
+}
+.services .box-container .box h3 {
+  font-size: 1.4rem;
+  color: #13a40b;
+  padding-bottom: 1rem;
+}
+.services .box-container .box p {
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1200px) {

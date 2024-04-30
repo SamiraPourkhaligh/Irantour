@@ -512,8 +512,13 @@ section {
           color: $white;
         }
         .btn-2 {
+          background: $black;
+          border: 0.1rem solid $white;
+          color: $white;
+
           &:hover {
-            background: $green;
+            background: $white;
+            color: $black;
           }
         }
       }
@@ -557,6 +562,61 @@ section {
   }
 }
 
+//  ==================== Services
+.services {
+  background: $light-bg;
+
+  .box-container {
+    @include grid(21rem);
+
+    .box {
+      text-align: center;
+      padding: 1rem;
+      border: $border;
+      border-radius: 0.5rem;
+      background: $white;
+      transition: all 0.2s;
+      &:hover {
+        background: $black;
+
+        img {
+          filter: invert(1);
+          -webkit-filter: invert(1);
+        }
+
+        p {
+          color: $white;
+        }
+
+        .btn-2 {
+          background: $black;
+          border: 0.1rem solid $white;
+          color: $white;
+
+          &:hover {
+            background: $white;
+            color: $black;
+          }
+        }
+      }
+
+      img {
+        height: 6rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        color: $green;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        padding-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
