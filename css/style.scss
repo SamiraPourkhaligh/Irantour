@@ -562,6 +562,62 @@ section {
   }
 }
 
+//  ==================== Review
+.reviews {
+  .review-slider {
+    overflow: hidden;
+
+    .slide {
+      .text {
+        padding: 2rem;
+        font-size: 1.2rem;
+        text-align: right;
+        font-style: italic;
+        background: $light-bg;
+        border-radius: $border-radius;
+        color: $black;
+        line-height: 1.7;
+        position: relative;
+        z-index: 0;
+        margin-bottom: 1.5rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -0.75rem;
+          left: 1.3rem;
+          height: 1.5rem;
+          width: 1.5rem;
+          background: $light-bg;
+          transform: rotate(45deg);
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+          color: $black;
+        }
+
+        span {
+          font-size: 1.2rem;
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
 //  ==================== Services
 .services {
   background: $light-bg;
@@ -617,6 +673,7 @@ section {
     }
   }
 }
+
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
@@ -626,6 +683,18 @@ section {
     .box-container {
       .box {
         scale: 0.9;
+      }
+    }
+  }
+
+  .reviews {
+    .review-slider {
+      .slide {
+        .text {
+          padding: 1rem;
+          font-size: 1.1rem;
+          line-height: 1.7;
+        }
       }
     }
   }

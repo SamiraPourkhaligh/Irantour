@@ -74,3 +74,28 @@ var swiper = new Swiper(".product-slider", {
     },
   },
 });
+
+// swiper slide for review section
+var swiper = new Swiper(".review-slider", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1640: {
+      slidesPerView: 4,
+    },
+  },
+});
