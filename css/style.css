@@ -571,6 +571,67 @@ section {
   font-size: 1.1rem;
 }
 
+.blogs .slide {
+  text-align: center;
+  padding: 0.8rem;
+  background: #eee;
+  height: auto;
+  position: relative;
+}
+.blogs .slide img {
+  height: 15rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+.blogs .slide .icons {
+  background: #10221b;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  top: -2rem;
+  display: inline-block;
+  direction: rtl;
+}
+.blogs .slide .icons a {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0 0.5rem;
+}
+.blogs .slide .icons a:hover {
+  color: #13a40b;
+}
+.blogs .slide .icons a i {
+  padding-left: 0.3rem;
+  color: #13a40b;
+}
+.blogs .slide h3 {
+  font-size: 1.3rem;
+  color: #10221b;
+  line-height: 0.5;
+  direction: rtl;
+}
+.blogs .slide h3 span {
+  font-size: 1rem;
+  font-style: italic;
+}
+.blogs .slide p {
+  font-size: 1rem;
+  padding: 1rem 0;
+  line-height: 1.4;
+  color: #10221b;
+  direction: rtl;
+  text-align: justify;
+}
+.blogs .slide p a {
+  color: #13a40b;
+  font-weight: 600;
+}
+.blogs .slide p a:hover {
+  color: #10221b;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;

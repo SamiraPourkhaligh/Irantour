@@ -674,6 +674,77 @@ section {
   }
 }
 
+//  ==================== Blogs
+.blogs {
+  .slide {
+    text-align: center;
+    padding: 0.8rem;
+    background: $light-bg;
+    height: auto;
+    position: relative;
+
+    img {
+      height: 15rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: $border-radius;
+    }
+
+    .icons {
+      background: $black;
+      border-radius: $border-radius;
+      padding: 0.2rem 0.5rem;
+      position: relative;
+      top: -2rem;
+      display: inline-block;
+      direction: rtl;
+
+      a {
+        font-size: 1rem;
+        color: $white;
+        padding: 0 0.5rem;
+
+        &:hover {
+          color: $green;
+        }
+
+        i {
+          padding-left: 0.3rem;
+          color: $green;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: $black;
+      line-height: 0.5;
+      direction: rtl;
+
+      span {
+        font-size: 1rem;
+        font-style: italic;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      padding: 1rem 0;
+      line-height: 1.4;
+      color: $black;
+      direction: rtl;
+      text-align: justify;
+      a {
+        color: $green;
+        font-weight: 600;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
