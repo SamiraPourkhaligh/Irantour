@@ -680,6 +680,13 @@ section {
   color: #fff;
 }
 
+.clients .slide {
+  text-align: center;
+}
+.clients .slide img {
+  height: 7rem;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;

@@ -801,6 +801,17 @@ section {
   }
 }
 
+//  ==================== Clients
+.clients {
+  .slide {
+    text-align: center;
+
+    img {
+      height: 7rem;
+    }
+  }
+}
+
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {

@@ -124,3 +124,24 @@ var swiper = new Swiper(".blogs-slider", {
     },
   },
 });
+
+// swiper slide for clients section
+var swiper = new Swiper(".clients-slider", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 5,
+    },
+  },
+});
