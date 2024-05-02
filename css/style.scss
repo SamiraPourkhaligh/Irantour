@@ -745,6 +745,62 @@ section {
   }
 }
 
+//  ==================== Newsletter
+.newsletter {
+  background: $light-bg;
+
+  .content {
+    max-width: 60rem;
+    margin: 1rem auto;
+
+    .heading {
+      direction: rtl;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: $black;
+      direction: rtl;
+      text-align: center;
+    }
+
+    form {
+      width: 40rem;
+      margin: 2rem auto;
+      background: $white;
+      border-radius: 5rem;
+      border: $border;
+      padding: 0.2rem;
+      display: flex;
+    }
+
+    .email {
+      width: 80%;
+      background: none;
+      text-transform: none;
+      font-size: 1.2rem;
+      color: $black;
+      padding: 0.5rem 1.5rem;
+      direction: rtl;
+    }
+
+    .submit {
+      width: 10rem;
+      border: $border;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 0;
+      border-radius: 5rem;
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
@@ -903,6 +959,14 @@ section {
       @include grid(18rem);
     }
   }
+
+  .newsletter {
+    .content {
+      form {
+        width: 30rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -935,6 +999,14 @@ section {
     .swiper-button-next::after,
     .swiper-button-prev::after {
       display: none;
+    }
+  }
+
+  .newsletter {
+    .content {
+      form {
+        width: 25rem;
+      }
     }
   }
 }
