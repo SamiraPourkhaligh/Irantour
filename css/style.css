@@ -687,6 +687,68 @@ section {
   height: 7rem;
 }
 
+footer {
+  padding-top: 5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/footer.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  padding: 0 5rem;
+  direction: rtl;
+}
+footer .box-container .box {
+  text-align: right;
+}
+footer .box-container .box h3 {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+footer .box-container .box a {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.3rem 0;
+}
+footer .box-container .box a i {
+  color: #13a40b;
+  padding-left: 0.5rem;
+}
+footer .box-container .box a:hover {
+  color: #13a40b;
+}
+footer .box-container .box a:hover i {
+  padding-left: 1.5rem;
+  transition: all 0.3s;
+}
+footer img {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+footer .credit {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+footer .credit i {
+  color: #eee;
+}
+footer .credit span {
+  color: #13a40b;
+}
+
 @media screen and (max-width: 1200px) {
   .header {
     padding: 0 2rem;
@@ -814,6 +876,10 @@ section {
   }
   .category .box-container .box {
     padding: 1rem 5rem;
+  }
+  footer img {
+    width: 10rem;
+    height: 10rem;
   }
 }
 @media screen and (max-width: 480px) {

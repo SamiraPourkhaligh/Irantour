@@ -812,6 +812,79 @@ section {
   }
 }
 
+//  ==================== Footer
+footer {
+  padding-top: 5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/footer.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+
+  .box-container {
+    @include grid(18rem);
+    padding: 0 5rem;
+    direction: rtl;
+    // display: flex;
+    // align-items: flex-start;
+    // justify-content: center;
+
+    .box {
+      text-align: right;
+
+      h3 {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        color: $white;
+      }
+
+      a {
+        display: block;
+        font-size: 1rem;
+        color: $white;
+        padding: 0.3rem 0;
+
+        i {
+          color: $green;
+          padding-left: 0.5rem;
+        }
+
+        &:hover {
+          color: $green;
+
+          i {
+            padding-left: 1.5rem;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+  img {
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+  }
+  .credit {
+    i {
+      color: $light-bg;
+    }
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 1rem;
+    color: $white;
+
+    span {
+      color: $green;
+    }
+  }
+}
+
 //  ==================== Media queries
 @media screen and (max-width: 1200px) {
   .header {
@@ -987,6 +1060,13 @@ section {
       .box {
         padding: 1rem 5rem;
       }
+    }
+  }
+
+  footer {
+    img {
+      width: 10rem;
+      height: 10rem;
     }
   }
 }
