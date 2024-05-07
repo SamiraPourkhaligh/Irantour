@@ -37,7 +37,7 @@ window.onload = () => {
   }
 };
 
-// swiper slide for hom section
+// swiper slide for home section
 var swiper = new Swiper(".home-slider", {
   loop: true,
   grabCursor: true,
@@ -105,6 +105,9 @@ var swiper = new Swiper(".blogs-slider", {
   loop: true,
   grabCursor: true,
   spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
