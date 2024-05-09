@@ -2,11 +2,7 @@
 
 ## Demo
 
-<<<<<<< HEAD
-To view a live demo of this project, click [here](https://www.github.com/octokatherine) .
-=======
 To view a live demo of this project, click [here](https://samirapourkhaligh.github.io/Irantour/) .
->>>>>>> main
 
 ## Description
 
