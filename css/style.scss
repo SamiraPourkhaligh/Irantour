@@ -700,7 +700,6 @@ section {
       top: -2rem;
       display: inline-block;
       direction: rtl;
-
       a {
         font-size: 1rem;
         color: $white;
@@ -731,19 +730,21 @@ section {
 
     p {
       font-size: 1rem;
-      padding: 1rem 0;
+      padding: 1rem 0 3rem 0;
       line-height: 1.4;
       color: $black;
       direction: rtl;
       text-align: justify;
     }
-    a {
-      color: $green;
-      font-weight: 600;
+
+    .btn-2 {
       position: absolute;
-      bottom: 0;
       left: 1rem;
-      padding-bottom: 1rem;
+      bottom: 1rem;
+      background: none;
+      border: none;
+      color: $green;
+
       &:hover {
         color: $black;
       }
@@ -854,7 +855,7 @@ section {
 footer {
   padding-top: 5rem;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/footer.png) no-repeat;
+    url("../images/footer.png") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -864,9 +865,6 @@ footer {
     @include grid(18rem);
     padding: 0 5rem;
     direction: rtl;
-    // display: flex;
-    // align-items: flex-start;
-    // justify-content: center;
 
     .box {
       text-align: right;
@@ -932,6 +930,7 @@ footer {
   .header {
     padding: 0 2rem;
   }
+
   .category {
     .box-container {
       .box {
