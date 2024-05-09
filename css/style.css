@@ -627,21 +627,21 @@ section {
 }
 .blogs .slide p {
   font-size: 1rem;
-  padding: 1rem 0;
+  padding: 1rem 0 3rem 0;
   line-height: 1.4;
   color: #10221b;
   direction: rtl;
   text-align: justify;
 }
-.blogs .slide a {
-  color: #13a40b;
-  font-weight: 600;
+.blogs .slide .btn-2 {
   position: absolute;
-  bottom: 0;
   left: 1rem;
-  padding-bottom: 1rem;
+  bottom: 1rem;
+  background: none;
+  border: none;
+  color: #13a40b;
 }
-.blogs .slide a:hover {
+.blogs .slide .btn-2:hover {
   color: #10221b;
 }
 .blogs .swiper-pagination {
@@ -735,7 +735,7 @@ section {
 
 footer {
   padding-top: 5rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/footer.png) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/footer.png") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
